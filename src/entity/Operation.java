@@ -9,7 +9,7 @@ public class Operation extends AbstractEntity {
 	private double result;
 	private String type;
 
-	private User owner;
+//	private User owner;
 
 	public Operation(double num1, double num2, String type) {
 		this.num1 = num1;
@@ -18,14 +18,14 @@ public class Operation extends AbstractEntity {
 
 	}
 
-	public User getOwner() {
-		return owner;
-	}
-
-	public void setOwner(User owner) {
-		this.owner = owner;
-	}
-
+//	public User getOwner() {
+//		return owner;
+//	}
+//
+//	public void setOwner(User owner) {
+//		this.owner = owner;
+//	}
+//
 	public double getNum1() {
 		return num1;
 	}

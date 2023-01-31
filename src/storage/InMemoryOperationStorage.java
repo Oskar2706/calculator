@@ -12,14 +12,14 @@ import java.util.stream.Collectors;
  */
 public class InMemoryOperationStorage implements OperationStorage{
 
-	private long nextId = 1;
+//	private long nextId = 1;
 
 	private final List<Operation> operationList = new ArrayList<>();
 
 	public void save(Operation operation) {
-		operation.setId(nextId);
+//		operation.setId(nextId);
 		operationList.add(operation);
-		nextId++;
+//		nextId++;
 	}
 
 	public List<Operation> findAll() {
@@ -33,17 +33,17 @@ public class InMemoryOperationStorage implements OperationStorage{
 				.toList();
 	}
 
-	public List<Operation> getAllByUserId(long id) {
-		Predicate<Operation> compareUserIds = operation -> operation.getOwner().getId() == id;
-
-		List<Operation> collectedList = operationList.stream()
-				.filter(
-						compareUserIds
-				)
-				.collect(
-						Collectors.toList()
-				);
-		return collectedList;
+//	public List<Operation> getAllByUserId(long id) {
+//		Predicate<Operation> compareUserIds = operation -> operation.getOwner().getId() == id;
+//
+//		List<Operation> collectedList = operationList.stream()
+//				.filter(
+//						compareUserIds
+//				)
+//				.collect(
+//						Collectors.toList()
+//				);
+//		return collectedList;
 //		List<Operation> operations = new ArrayList<>();
 //		for (Operation operation : operationList) {
 //			if (operation.getOwner().getId() == id) {
@@ -52,4 +52,4 @@ public class InMemoryOperationStorage implements OperationStorage{
 //		}
 //		return operations;
 	}
-}
+

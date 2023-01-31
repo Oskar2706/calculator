@@ -1,3 +1,7 @@
 Operation{num1=23.0, num2=23.0, result=46.0, type='sum'}
 Operation{num1=34.0, num2=56.0, result=90.0, type='sum'}
 Operation{num1=45.0, num2=56.0, result=2520.0, type='mult'}
+Operation{num1=23.0, num2=23.0, result=46.0, type='sum'}
+Operation{num1=23.0, num2=23.0, result=46.0, type='sum'}
+Operation{num1=23.0, num2=32.0, result=55.0, type='sum'}
+Operation{num1=22.0, num2=22.0, result=44.0, type='sum'}

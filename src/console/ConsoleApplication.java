@@ -1,9 +1,9 @@
 package console;
 
 import entity.Operation;
-import entity.User;
+//import entity.User;
 import service.CalculatorService;
-import service.UserService;
+//import service.UserService;
 
 import java.util.List;
 import java.util.Optional;
@@ -17,7 +17,7 @@ import static console.util.ConsoleWriter.write;
 public class ConsoleApplication {
 
 //    public static ConsoleSession consoleSession;
-    private final UserService userService = new UserService();
+//    private final UserService userService = new UserService();
     private final CalculatorService calculatorService = new CalculatorService();
 
     public void run() {
@@ -74,8 +74,8 @@ public class ConsoleApplication {
                         write("Result = " + result.getResult());
                         continue;
                     case 2:
-                        calculatorService.showHistory()
-                                .forEach((oper) -> write(oper.toString()));
+                        calculatorService.showHistory().forEach((oper) -> write(oper.toString()));
+                        continue;
                     case 4:
                         return;
 
