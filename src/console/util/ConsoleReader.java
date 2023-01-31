@@ -20,4 +20,5 @@ public final class ConsoleReader {
 	public static int readInt() {
 		return SCANNER.nextInt();
 	}
+
 }
