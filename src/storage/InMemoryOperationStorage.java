@@ -7,20 +7,19 @@ import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-/**
- * @author Simon Pirko on 17.01.23
- */
-public class InMemoryOperationStorage implements OperationStorage{
 
-//	private long nextId = 1;
+public  class InMemoryOperationStorage implements OperationStorage {
 
 	private final List<Operation> operationList = new ArrayList<>();
+		public void save (Operation operation) {
 
-	public void save(Operation operation) {
-//		operation.setId(nextId);
-		operationList.add(operation);
-//		nextId++;
-	}
+			operationList.add(operation);
+		}
+
+
+
+
+
 
 	public List<Operation> findAll() {
 		return new ArrayList<>(operationList);
@@ -53,3 +52,14 @@ public class InMemoryOperationStorage implements OperationStorage{
 //		return operations;
 	}
 
+//public class InMemoryOperationStorage implements OperationStorage{
+//
+////	private long nextId = 1;
+//
+//	private final List<Operation> operationList = new ArrayList<>();
+//
+//	public void save(Operation operation) {
+////		operation.setId(nextId);
+//		operationList.add(operation);
+////		nextId++;
+////	}

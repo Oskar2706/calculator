@@ -12,16 +12,16 @@ import java.util.List;
  */
 public class CalculatorService {
 
-    private final OperationStorage fileStorage = new InFileOperationStorage();
+    private final InFileOperationStorage fileStorage = new InFileOperationStorage();
     private final OperationStorage memoryStorage = new InMemoryOperationStorage();
 
     public Operation calculate(Operation operation) {
-		String stringtype = operation.getType().toUpperCase();
+        String stringtype = operation.getType().toUpperCase();
 
-		Type type = Type.valueOf(stringtype);
+        Type type = Type.valueOf(stringtype);
 
 
-		switch (type) {
+        switch (type) {
 
             case SUM:
                 operation.setResult(sum(operation.getNum1(), operation.getNum2()));
@@ -74,7 +74,7 @@ public class CalculatorService {
         SUB,
         MULT,
         DIV
-	}
+    }
 }
 
 //	public List<Operation> findAllByUser(User user) {
